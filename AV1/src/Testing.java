@@ -1,5 +1,9 @@
+import javax.swing.*;
+import java.util.ArrayList;
+
 public class Testing {
     public static void main(String[] args) {
+        int input_sector = 0;
         Roles programador_junior = new Roles("Programador júnior", 3500, 8493874);
         Roles programador_infra = new Roles("Programador de infraestrutura", 5250.25, 8500323);
         Roles artista_java = new Roles("Programador de infraestrutura", 4200, 8533944);
@@ -21,6 +25,28 @@ public class Testing {
 
         diretor_geral.print_role();
         funcionario9.print_employee();
+
+        ArrayList employee_collection = new ArrayList();
+        employee_collection.add(funcionario1);
+        employee_collection.add(funcionario2);
+        employee_collection.add(funcionario3);
+        employee_collection.add(funcionario4);
+        employee_collection.add(funcionario5);
+        employee_collection.add(funcionario6);
+        employee_collection.add(funcionario7);
+        employee_collection.add(funcionario8);
+        employee_collection.add(funcionario9);
+        Sector setor1 = new Sector(null, "Setor de Base", 30);
+        System.out.println("");
+        for(int i = 0; i<employee_collection.size(); i++){
+            Employee aux = (Employee) employee_collection.get(i);
+            System.out.println("[NOME]: " + aux.getName() + "   [CPF]: "
+                    + aux.getCpf() + "   [EMAIL]: " + aux.getEmail() + "   [DATA DE NASC]: " + aux.getBirthday() + "   [CARGO]: " + aux.getPost().getName());
+            JOptionPane.showMessageDialog(null, "Deseja adicionar [" + aux.getName() + "] ao setor [" + setor1.getName() + "] ?");
+            input_sector = Integer.parseInt((JOptionPane.showInputDialog("1 = SIM  /    2 = NÃO")));
+            if(input_sector == 1){
+            }
+        }
 
     }
 }
