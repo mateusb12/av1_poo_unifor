@@ -15,6 +15,10 @@ public class Employee {
         this.post = post;
     }
 
+    public void print_employee(){
+        System.out.println("[Employee_Name] " + this.name + "   [Employee_CPF] " + this.cpf + "   [Employee_Mail] " + this.email + "   [Employee_Birthday] " + this.birthday +  "   [Employee_Role] " + this.post.getName());
+    }
+
     public String getName() {
         return name;
     }

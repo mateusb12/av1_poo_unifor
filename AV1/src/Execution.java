@@ -183,7 +183,7 @@ public class Execution {
                     //JOptionPane.showMessageDialog(null, "[I = " + i + "]   [collection_size = " + employee_collection.size());
                     JOptionPane.showMessageDialog(null, "[NOME]: " + employee_collection.get(i).getName() + "   [CPF]: "
                             + employee_collection.get(i).getCpf() + "   [EMAIL]: " + employee_collection.get(i).getEmail() + "   [DATA DE NASC]: " + employee_collection.get(i).getBirthday() + "   [CARGO]: " + employee_collection.get(i).getPost().getName());
-                    JOptionPane.showMessageDialog(null, "Deseja adicioná-lo ao setor [" + input_name + "] ?");
+                    JOptionPane.showMessageDialog(null, "Deseja adicionar [" + employee_collection.get(i).getName() + "] ao setor [" + input_name + "] ?");
                     input_sector = Integer.parseInt((JOptionPane.showInputDialog("1 = SIM  /    2 = NÃO")));
                     if(input_sector == 1){
 

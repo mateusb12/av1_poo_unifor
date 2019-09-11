@@ -11,6 +11,10 @@ public class Roles {
         this.ID = ID;
     }
 
+    public void print_role(){
+        System.out.println("[Role_Name] " + this.name + "   [Role_Salary] " + this.salary + "   [Role_ID] " + this.ID);
+    }
+
     public String getName() {
         return name;
     }
